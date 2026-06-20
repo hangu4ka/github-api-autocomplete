@@ -47,10 +47,10 @@ searchInput.addEventListener("input", async () => {
 });
 
 autocompleteList.addEventListener("click", (event) => {
-  searchInput.value = "";
-   // autocompleteList.replaceChildren(); если нужно очистить автокомплит после выбора 
   const repoListAppended = document.querySelector(".repo-list-appended");
   const repo = result.find((repo) => repo.name === event.target.textContent);
+  searchInput.value = "";
+  autocompleteList.replaceChildren(); //если нужно очистить автокомплит после выбора
   const li = document.createElement("li");
   li.innerHTML = ` 
   <div class="repo-info">

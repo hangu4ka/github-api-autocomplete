@@ -75,17 +75,21 @@ main {
 .repo-list-appended li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   padding: 16px 8px;
   height: 101px;
   border: 1px solid #000000;
   cursor: pointer;
 }
 
-span {
-  display: block;
+.repo-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-span:hover{
+
+
+.repo-info:hover{
   text-decoration: underline;
   text-decoration-color: #65cdf9;
 }
@@ -96,4 +100,5 @@ span:hover{
   cursor: pointer;
   height: 38.5px;
   font-size: 40px;
+  align-items: center;
 }
